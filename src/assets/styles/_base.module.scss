@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;300&display=swap');
+// @import url('../asset/fonts/Futura-Md.ttf');
+
+/*
+  Color Variables
+  ---------------
+*/
+$color-purple: #6837ef;
+$color-font: #696d8c;
+$color-grey: #ecebf5;
+$color-grey-two: #e5e4ef;
+$color-white: #ffffff;
+$color-black: #060213;
+/* 
+  Mixins 
+  ------
+*/
+
+@font-face {
+  font-family: 'Gelion Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Gelion Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gelion Thin';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Gelion Thin.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gelion Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Gelion Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gelion Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Gelion Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gelion Semi Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Gelion SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gelion Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Gelion Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gelion Black';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Gelion Black.woff') format('woff');
+}
+
+@mixin centre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2.4rem;
+}
+/*
+  Font Variables
+  --------------
+*/
+$font-light: 'Gelion Light', sans-serif;
+$font-thin: 'Gelion Thin';
+$font-regular: 'Gelion Regular', sans-serif;
+$font-medium: 'Gelion Mediun', sans-serif;
+$font-semi-bold: 'Gelion Semi Bold', sans-serif;
+$font-bold: 'Gelion Bold', sans-serif;
+$font-black: 'Gelion Black', sans-serif;
+/*
+  Mobile Responsiveness
+  ---------------------
+*/
+
+/*
+  Main
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+a {
+  color: $color-black;
+  text-decoration: none;
+}
+
+a:link,
+a:visited a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+input:link,
+input:hover,
+input:focus,
+input:active {
+  outline: none;
+  background-color: tranparent;
+}
+
+input::-webkit-input-placeholder {
+  font-family: $font-regular;
+}
+
+input::-moz-placeholder {
+  font-family: $font-regular;
+}
+
+input:-ms-input-placeholder {
+  font-family: $font-regular;
+}
+
+input::-ms-input-placeholder {
+  font-family: $font-regular;
+}
+
+input::placeholder {
+  font-family: $font-regular;
+}
+
+textarea::-webkit-input-placeholder {
+  color: $color-white;
+}
+
+textarea::-moz-placeholder {
+  color: $color-white;
+}
+
+textarea:-ms-input-placeholder {
+  color: $color-white;
+}
+
+textarea::-ms-input-placeholder {
+  color: $color-white;
+}
+
+textarea::placeholder {
+  color: $color-white;
+}
+
+button:link,
+button:hover,
+button:focus,
+button:active {
+  outline: none;
+  background-color: tranparent;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px/16px = 62.5% 1rem
+  font-family: $font-regular;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: 50%;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 50%;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-regular;
+  line-height: 1.6;
+}

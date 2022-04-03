@@ -1,0 +1,101 @@
+.dashboard {
+  &__container {
+    &__body {
+      &__row {
+        &__graph {
+          height: 31.4rem;
+          border: 0.1rem solid $color-grey;
+          border-radius: 1rem;
+          display: flex;
+          &__left {
+            padding: 2.4rem;
+            width: 72.31% !important;
+            & canvas {
+              height: 22rem !important;
+              padding: 0;
+            }
+
+            &__top {
+              height: 3.8rem;
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 0.8rem;
+              width: 100%;
+              & > * {
+                display: flex;
+                align-items: center;
+              }
+
+              &__left {
+                & p {
+                  margin-right: 1.6rem;
+                  font-weight: 600;
+                }
+
+                & span {
+                  height: 2.8rem;
+                  background-color: #25bb871a;
+                  font-size: 1.2rem;
+                  color: #25bb87;
+                  padding: 0.4rem 1.2rem;
+                  border-radius: 0.4rem;
+                  font-weight: 600;
+                }
+              }
+
+              &__right {
+                &__left {
+                  display: flex;
+                  align-items: center;
+                  & .box {
+                    width: 1rem;
+                    height: 1rem;
+                    border-radius: 0.2rem;
+                    margin-right: 0.8rem;
+                  }
+                  & p {
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                  }
+                }
+
+                & .select {
+                  width: 14.8rem;
+                }
+              }
+            }
+          }
+          &__right {
+            padding: 3.2rem 2.4rem;
+            width: 27.68%;
+            border-left: 0.1rem solid $color-grey;
+            & > * {
+              &:not(:last-child) {
+                margin-bottom: 1.8rem;
+              }
+            }
+            &__card {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              background-color: $color-grey;
+              border-radius: 1rem;
+              padding: 3rem 3rem 2.4rem 1.6rem;
+              & p {
+                font-size: 1.4rem;
+                color: $color-font;
+                margin-bottom: 0.8rem;
+              }
+
+              & h3 {
+                font-size: 2rem;
+                color: $color-black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

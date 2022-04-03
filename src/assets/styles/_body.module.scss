@@ -1,0 +1,20 @@
+.dashboard {
+  &__container {
+    &__body {
+      padding: 1.2rem 5.6rem 1.2rem 4rem;
+      overflow: hidden;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      &__row {
+        overflow-y: auto;
+        & > * {
+          &:not(:last-child) {
+            margin-bottom: 2.4rem;
+          }
+        }
+      }
+    }
+  }
+}

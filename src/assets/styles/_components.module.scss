@@ -1,0 +1,199 @@
+.btn {
+  text-transform: capitalize;
+  font-family: $font-regular;
+  font-size: 1.6rem;
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+}
+
+input {
+  font-size: 1.6rem;
+  font-family: $font-regular;
+  border: none;
+  background: none;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ece8f5;
+  width: 2.4rem;
+  transform: rotate(90deg);
+}
+
+.dropdown {
+  & .group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 2.4rem;
+    &:hover div > p,
+    &:hover .left > svg {
+      color: $color-purple;
+      fill: $color-purple;
+      transition: ease-in-out, width 0.5s ease-in-out;
+    }
+
+    &:focus div > p,
+    &:focus div > svg {
+      color: $color-purple;
+      fill: $color-purple;
+      transition: ease-in-out, width 0.5s ease-in-out;
+    }
+    & .left {
+      display: flex;
+      align-items: flex-start;
+
+      & .icon {
+        width: 1.6rem;
+        margin-right: 1.6rem;
+        fill: $color-font;
+      }
+      & p {
+        font-family: $font-semi-bold;
+        color: $color-font;
+        line-height: 1.9rem;
+        text-transform: capitalize;
+      }
+    }
+
+    & .right {
+      & .icon {
+        fill: $color-grey-two;
+        height: 2.4rem;
+        width: 2.4rem;
+      }
+    }
+  }
+
+  & .list {
+    display: flex;
+    flex-direction: column;
+    & > * {
+      margin-top: 1rem;
+    }
+    & .item {
+      list-style: none;
+      padding-left: 3.2rem;
+      color: $color-font;
+      font-size: 1.6rem;
+      cursor: pointer;
+      &:hover {
+        font-weight: 600;
+        color: $color-black;
+        transition: ease-in-out, width 0.35s ease-in-out;
+      }
+      &:focus {
+        font-weight: 600;
+        color: $color-black;
+        border-left: 0.1rem solid $color-grey;
+        padding-left: 1.6rem;
+        margin-left: 1.5rem;
+        transition: ease-in-out, width 0.35s ease-in-out;
+      }
+    }
+  }
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: none;
+  border: 0.1rem solid #e1e1eb;
+  border-radius: 0.8rem;
+  color: #a3a3c2;
+  padding: 0 1.6rem;
+  height: 100%;
+  & .dropdown {
+    width: 100%;
+    position: relative;
+    & .group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 2.4rem;
+      &:hover div > p,
+      &:hover .right > svg {
+        color: $color-purple;
+        fill: $color-purple;
+        transition: ease-in-out, width 0.5s ease-in-out;
+      }
+      & .left {
+        display: flex;
+        align-items: flex-start;
+
+        & .icon {
+          display: none;
+        }
+        & p {
+          color: $color-black;
+        }
+      }
+
+      & .right {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        & .icon {
+          height: 1.6rem;
+          width: 1.6rem;
+          fill: $color-black;
+        }
+      }
+    }
+
+    & .list {
+      display: flex;
+      flex-direction: column;
+      background-color: #fafafa;
+      width: 100%;
+      position: absolute;
+      top: 4rem;
+      border-radius: 0.8rem;
+      & > * {
+        margin-top: 1rem;
+      }
+      & .item {
+        padding: 0 0.8rem;
+        &:last-child {
+          padding-bottom: 0.8rem;
+        }
+        list-style: none;
+        color: $color-font;
+        font-size: 1.6rem;
+        cursor: pointer;
+        &:hover {
+          font-weight: 600;
+          color: $color-black;
+          transition: ease-in-out, width 0.35s ease-in-out;
+        }
+        &:focus {
+          font-weight: 600;
+          color: $color-black;
+          border-left: none;
+          padding-left: 0.8rem;
+          margin-left: unset;
+          transition: ease-in-out, width 0.35s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  @media all and (min-width: 1024px) and (max-width: 1440px) {
+    padding: 0;
+  }
+  @media all and (min-width: 1440px) and (max-width: 1920px) {
+    padding: 0;
+  }
+  @media all and (min-width: 1920px) {
+    padding: 0 24rem;
+    max-width: 192rem;
+    margin: 0 auto;
+  }
+}
