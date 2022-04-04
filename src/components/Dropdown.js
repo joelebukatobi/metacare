@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
-// import onClickOutside from 'react-onclickoutside';
 
 function Dropdown({ icon, title, items, chevron }) {
   const [open, setOpen] = useState(false);
+  const [isActive, setActive] = useState(false);
+
   const toggle = () => {
     setOpen(!open);
-    // setActive(!active);
+    setActive(!isActive);
   };
-
-  // NavbarItem.handleClickOutside = () => setOpen(false);
 
   return (
     <div className="dropdown">
-      <div tabIndex={0} role="button" onKeyPress={() => toggle(!open)} onClick={() => toggle(!open)}>
+      <div
+        className={isActive ? 'active' : ''}
+        tabIndex={0}
+        role="button"
+        onKeyPress={() => toggle(!open)}
+        onClick={() => toggle(!open, isActive)}
+      >
         <a href="/#" className="group">
           <div className="left">
             <svg className="icon" viewBox="0 0 16 16">
@@ -30,7 +35,7 @@ function Dropdown({ icon, title, items, chevron }) {
       {open && (
         <div className="list">
           {items.map((item) => (
-            <a href="#" className="item" key={item.id}>
+            <a href="/#" className="item" key={item.id}>
               {item}
             </a>
           ))}
@@ -39,11 +44,5 @@ function Dropdown({ icon, title, items, chevron }) {
     </div>
   );
 }
-
-// const clickOutsideConfig = {
-//   handleClickOutside: () => NavbarItem.handleClickOutside,
-// };
-
-// export default onClickOutside(NavbarItem, clickOutsideConfig);
 
 export default Dropdown;

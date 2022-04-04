@@ -130,6 +130,73 @@
               }
             }
           }
+
+          & .active {
+            border-bottom: 0.2rem solid $color-purple;
+            margin-bottom: -0.2rem;
+            & a {
+              color: $color-purple;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      @media (min-width: 320px) and (max-width: 576px) {
+        width: 100%;
+        // border: 2px solid green;
+        &__top {
+          width: 100%;
+          // border: 2px solid red;
+          padding: 0;
+          padding-bottom: 1.6rem;
+          &__input {
+            width: 60%;
+            // border: 2px solid blue;
+            & .input {
+              width: 100%;
+            }
+          }
+          & hr {
+            display: none;
+          }
+          &__notification {
+            width: 38%;
+            border: none;
+            justify-content: flex-end;
+            &__left {
+              // display: none;
+              position: relative;
+              justify-content: unset;
+              margin-right: 0.8rem;
+              & svg {
+                height: 3.2rem;
+                width: 3.2rem;
+              }
+
+              & .btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+              }
+            }
+            &__right {
+              // border: 2px solid red;
+              margin: 0rem;
+            }
+          }
+        }
+
+        &__bottom {
+          padding: 0 1.6rem;
+          &__list {
+            justify-content: space-between;
+            & > * {
+              &:not(:last-child) {
+                margin-right: 0rem;
+              }
+            }
+          }
         }
       }
     }

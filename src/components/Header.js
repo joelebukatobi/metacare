@@ -20,12 +20,14 @@ export default function Header() {
           <Dropdown
             title="Filter Options"
             items={['Option 1', 'Option 2', 'Option 3']}
-            chevron={`${Sprite}#icon-chevron-down`}
+            chevron={`${Sprite}#icon-chevron-right`}
           />
         </div>
         <hr />
         <div className="dashboard__container__header__right__button">
-          <button className="btn">Export</button>
+          <button type="button" className="btn">
+            Export
+          </button>
         </div>
       </div>
     </div>

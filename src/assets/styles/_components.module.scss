@@ -36,12 +36,6 @@ hr {
       transition: ease-in-out, width 0.5s ease-in-out;
     }
 
-    &:focus div > p,
-    &:focus div > svg {
-      color: $color-purple;
-      fill: $color-purple;
-      transition: ease-in-out, width 0.5s ease-in-out;
-    }
     & .left {
       display: flex;
       align-items: flex-start;
@@ -147,11 +141,10 @@ hr {
     }
 
     & .list {
-      display: flex;
-      flex-direction: column;
       background-color: #fafafa;
       width: 100%;
       position: absolute;
+      z-index: 1000;
       top: 4rem;
       border-radius: 0.8rem;
       & > * {
@@ -179,6 +172,26 @@ hr {
           margin-left: unset;
           transition: ease-in-out, width 0.35s ease-in-out;
         }
+      }
+    }
+  }
+}
+
+.active {
+  & .group {
+    & .left {
+      & svg {
+        fill: $color-purple !important;
+      }
+      & p {
+        color: $color-purple;
+      }
+    }
+
+    & .right {
+      & svg {
+        transform: rotate(90deg);
+        transition: ease-in-out, width 0.5s ease-in-out;
       }
     }
   }

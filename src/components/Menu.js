@@ -31,7 +31,7 @@ export default function Menu() {
       </div>
       <div className="dashboard__container__menu__bottom">
         <ul className="dashboard__container__menu__bottom__list">
-          <li>
+          <li className="active">
             <a href="/#">Efficiency </a>
           </li>
           <li>
