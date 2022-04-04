@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavbarCard from 'components/NavbarCard';
 import Dropdown from 'components/Dropdown';
 import Sprite from 'assets/images/sprite.svg';
 
-export default function Navbar() {
+export default function Navbar({ style, toggle }) {
   return (
-    <div className="dashboard__navbar">
-      <NavbarCard />
+    <div className="dashboard__navbar" style={style}>
+      <NavbarCard toggle={toggle} />
       <Dropdown icon={`${Sprite}#icon-msg`} title="admin" items={[]} chevron={`${Sprite}#icon-chevron-right`} />
       <Dropdown
         icon={`${Sprite}#icon-projects`}

@@ -97,7 +97,7 @@
             }
           }
 
-          @media (min-width: 320px) and (max-width: 576px) {
+          @media (min-width: 320px) and (max-width: 768px) {
             flex-direction: column;
             height: unset;
             &__left {

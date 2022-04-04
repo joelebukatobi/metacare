@@ -35,7 +35,7 @@
     }
   }
 
-  @media (min-width: 320px) and (max-width: 576px) {
+  @media (min-width: 320px) and (max-width: 768px) {
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 1fr;
@@ -45,7 +45,6 @@
     &__navbar {
       display: none;
       grid-area: 1 / 1 / 2 / 2;
-      border: 0.11rem solid red;
       padding: 3.2rem;
     }
     &__container {

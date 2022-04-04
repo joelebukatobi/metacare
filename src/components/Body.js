@@ -22,6 +22,12 @@ export const state = {
         grid: {
           display: false,
         },
+        ticks: {
+          font: {
+            size: 12,
+          },
+          color: 'black',
+        },
       },
 
       y: {
@@ -106,7 +112,6 @@ export const state = {
 };
 
 export default function Body() {
-  console.log(state.data);
   return (
     <div className="dashboard__container__body">
       <div className="dashboard__container__body__row">

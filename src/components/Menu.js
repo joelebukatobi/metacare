@@ -1,10 +1,15 @@
 import React from 'react';
 import Sprite from 'assets/images/sprite.svg';
 
-export default function Menu() {
+export default function Menu({ toggle }) {
   return (
     <div className="dashboard__container__menu">
       <div className="dashboard__container__menu__top">
+        <div className="dashboard__container__menu__top__mobile" onClick={toggle}>
+          <div className="dashboard__container__menu__top__mobile__bar"></div>
+          <div className="dashboard__container__menu__top__mobile__bar"></div>
+          <div className="dashboard__container__menu__top__mobile__bar"></div>
+        </div>
         <div className="dashboard__container__menu__top__input">
           <input type="text" className="input" placeholder="Ask us any question" />
           <button className="btn">
