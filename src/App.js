@@ -16,7 +16,7 @@ const App = () => {
     <div>
       <div className="container">
         <div className="dashboard">
-          <Navbar toggle={toggle} style={open ? { display: 'none' } : { display: 'block' }} />
+          <Navbar toggle={toggle} style={open ? { display: 'block' } : { display: 'none' }} />
           <div className="dashboard__container">
             <Menu toggle={toggle} />
             <Header />

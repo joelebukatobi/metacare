@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NavbarCard from 'components/NavbarCard';
 import Dropdown from 'components/Dropdown';
 import Sprite from 'assets/images/sprite.svg';
