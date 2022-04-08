@@ -10,13 +10,13 @@ import 'assets/styles/main.scss';
 const App = () => {
   const [open, setOpen] = useState(false);
   const toggle = () => {
-    setOpen(!open);
+    setOpen(open);
   };
   return (
     <div>
       <div className="container">
         <div className="dashboard">
-          <Navbar toggle={toggle} style={open ? { display: 'block' } : { display: 'none' }} />
+          <Navbar toggle={toggle} style={!open ? { display: 'block' } : { display: 'none' }} />
           <div className="dashboard__container">
             <Menu toggle={toggle} />
             <Header />
